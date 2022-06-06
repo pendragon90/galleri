@@ -1,0 +1,97 @@
+/* Font */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/bebasneue-regular-webfont.woff') format('woff');
+}
+
+/* Style body */
+body {
+    font: 18px/36px 'BebasNeue', 'Arial Narrow', sans-serif;
+    background-color: rgb(117,95,170);
+}
+h1 {
+    color: white;
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 2px 2px 1px blueviolet;
+    line-height: normal;
+}
+.container {
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0 , 0.3);
+    padding: 20px;
+}
+.clear {
+    clear: both;
+}
+.gallery li {
+    float: left;
+    position: relative;
+    margin: 0 13px;
+}
+.gallery img {
+    border: 2px solid rgb(117,95,170);
+}
+.gallery span {
+    background-color: rgba(117,95,170, .5);
+    width: 120px;
+    height: 120px;
+    display: block;
+    text-align: center;
+    line-height: 120px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: white;
+    opacity: 0;
+    transition: 1s;
+}
+.gallery a:hover span {
+    opacity: 1;
+}
+.gallery img, .gallery span, .gallery li {
+    border-radius: 50%;
+}
+.overlay {
+    opacity: 0;
+    background-color: rgba(0, 0, 0 , 0.7);
+    z-index: -9999;
+    position: absolute;
+    position: fixed;
+    text-align: center;
+    padding: 100px 0;
+    transition: all .5s;
+}
+.overlay img {
+    height: 100%;
+    border-radius: 0;
+    border: 0;
+}
+.overlay a img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    margin-left: 280px;    
+}
+.overlay:target {
+    z-index: 9999;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.next {
+    position: absolute;
+    bottom: 60%;
+    right: 57%; 
+}
+.prev {
+    position: absolute;
+    bottom: 60%;
+    left: 13%;
+}
